@@ -302,6 +302,10 @@ module Blacklight
       end
     end
 
+    def configure_elasticsearch_document!(index, &block)
+      document_model.configure!(index, &block)
+    end
+
     ##
     # Deprecated. Get the list of facet fields to explicitly
     # add to the solr request
